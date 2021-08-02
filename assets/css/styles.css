@@ -63,11 +63,15 @@ body {
   width: 350px;
   z-index: 99;
 }
-.input_ruri input:focus {
+.input_ruri input:focus,
+.input_ruri input:valid {
   border-bottom: 3px solid #b7c3ac;
   height: 48px;
 }
-.input_ruri input:focus:focus + label {
+.input_ruri input:focus:focus + label,
+.input_ruri input:valid:focus + label,
+.input_ruri input:focus:valid + label,
+.input_ruri input:valid:valid + label {
   color: #b7c3ac;
   transform: translate(-34px, 46px) scale(0.8);
 }

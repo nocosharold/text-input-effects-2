@@ -71,11 +71,13 @@ body {
         width: 350px;
         z-index: 99;
 
-        &:focus {
+        &:focus,
+        &:valid {
             border-bottom: 3px solid #b7c3ac;
             height: 48px;
             
-            &:focus + label {
+            &:focus + label,
+            &:valid + label {
                 color: #b7c3ac;
                 transform: translate(-34px, 46px) scale(0.8);
             }
