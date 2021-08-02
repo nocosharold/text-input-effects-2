@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f9f7f6;
+  color: #404d5b;
+  font-weight: 500;
+  font-size: 1.05em;
+  font-family: 'Raleway', sans-serif;
+}
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+.container .content {
+  font-size: 150%;
+  padding: 3em 0;
+}
+.container .content h2 {
+  margin: 0 0 2em;
+  opacity: 0.1;
+}
+.bgcolor_ruri {
+  background: #2f3238;
+  color: #fff;
+}
+.input_ruri {
+  display: inline-block;
+  margin: 1em;
+  width: calc(98%);
+  max-width: 350px;
+  position: relative;
+  margin-bottom: 3em;
+}
+.input_ruri label {
+  color: #696969;
+  display: flex;
+  font-weight: 700;
+  height: inherit;
+  justify-content: flex-start;
+  line-height: 46px;
+  transition: all .25s;
+  width: 100%;
+  z-index: 10;
+}
+.input_ruri input {
+  background: transparent;
+  border: none;
+  border-bottom: 8px solid #b7c3ac;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 26px;
+  height: 48px;
+  left: 0;
+  line-height: 46px;
+  outline: none;
+  padding: 10px 0;
+  position: absolute;
+  transition: all .25s;
+  width: 350px;
+  z-index: 99;
+}
+.input_ruri input:focus {
+  border-bottom: 3px solid #b7c3ac;
+  height: 48px;
+}
+.input_ruri input:focus:focus + label {
+  color: #b7c3ac;
+  transform: translate(-34px, 46px) scale(0.8);
+}
