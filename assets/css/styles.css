@@ -109,9 +109,9 @@ body {
 }
 .input_manami input {
   background: transparent;
+  border: none;
   border-bottom: 8px solid #a8a8a8;
   border-top: 1px solid rgba(168, 168, 168, 0.2);
-  border: none;
   box-sizing: border-box;
   color: #fff;
   font-size: 26px;
