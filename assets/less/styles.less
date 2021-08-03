@@ -26,8 +26,19 @@ body {
             margin: 0 0 2em;
             opacity: 0.1;
         }
+
+        .input {
+            display: inline-block;
+            margin: 1em;
+            width: calc(100% - 2em);
+            max-width: 350px;
+            position: relative;
+            margin-bottom: 3em;
+        }
     }
 }
+
+/* Ruri */
 
 .bgcolor_ruri {
     background: #2f3238;
@@ -35,13 +46,6 @@ body {
 }
 
 .input_ruri {
-    display: inline-block;
-    margin: 1em;
-    width: calc(100% - 2em);
-    max-width: 350px;
-    position: relative;
-    margin-bottom: 3em;
-
     label {
         color: #696969;
         display: flex;
@@ -80,6 +84,81 @@ body {
             &:valid + label {
                 color: #b7c3ac;
                 transform: translate(-34px, 46px) scale(0.8);
+            }
+        }
+    }
+}
+
+/* Manami */
+
+.bgcolor_manami {
+    background: #e8e8e8;
+}
+
+.input_manami {
+    label {
+        color: #696969;
+        display: flex;
+        font-weight: 700;
+        height: inherit;
+        justify-content: flex-start;
+        line-height: 46px;
+        transition: all .25s;
+        width: 100%;
+    }
+
+    label::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #e8e8e8;
+        transform: translateY(-46px);
+        transition: all 0.2s ease;
+    }
+
+    label::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #e8e8e8;
+        transform: translateY(-46px);
+    }
+
+    input {
+        background: transparent;
+        box-sizing: border-box;
+        padding: 0.5em;
+        border: none;
+        color: #fff;
+        font-size: 26px;
+        height: 48px;
+        left: 0;
+        line-height: 46px;
+        outline: none;
+        position: absolute;
+        width: 350px;
+        z-index: 99;
+        transition: all 0.2s ease;
+        border-top:  1px solid rgba(168, 168, 168, 0.2);
+        border-bottom: 8px solid #a8a8a8;
+
+        &:focus,
+        &:valid {
+            padding-top: 22px;
+            
+            &:focus + label,
+            &:valid + label {
+                transform: translateY(46px);
+                font-size: 16px;
+            }
+
+            &:focus + label::before,
+            &:valid + label::before {
+                transform: translateY(-92px);
+                border-bottom: 40px solid #a8a8a8;
+                z-index: 99;
             }
         }
     }

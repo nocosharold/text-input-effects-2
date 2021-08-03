@@ -23,17 +23,18 @@ body {
   margin: 0 0 2em;
   opacity: 0.1;
 }
-.bgcolor_ruri {
-  background: #2f3238;
-  color: #fff;
-}
-.input_ruri {
+.container .content .input {
   display: inline-block;
   margin: 1em;
   width: calc(98%);
   max-width: 350px;
   position: relative;
   margin-bottom: 3em;
+}
+/* Ruri */
+.bgcolor_ruri {
+  background: #2f3238;
+  color: #fff;
 }
 .input_ruri label {
   color: #696969;
@@ -74,4 +75,72 @@ body {
 .input_ruri input:valid:valid + label {
   color: #b7c3ac;
   transform: translate(-34px, 46px) scale(0.8);
+}
+/* Manami */
+.bgcolor_manami {
+  background: #e8e8e8;
+}
+.input_manami label {
+  color: #696969;
+  display: flex;
+  font-weight: 700;
+  height: inherit;
+  justify-content: flex-start;
+  line-height: 46px;
+  transition: all .25s;
+  width: 100%;
+}
+.input_manami label::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #e8e8e8;
+  transform: translateY(-46px);
+  transition: all 0.2s ease;
+}
+.input_manami label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #e8e8e8;
+  transform: translateY(-46px);
+}
+.input_manami input {
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  height: 48px;
+  left: 0;
+  line-height: 46px;
+  outline: none;
+  position: absolute;
+  width: 350px;
+  z-index: 99;
+  transition: all 0.2s ease;
+  border-top: 1px solid rgba(168, 168, 168, 0.2);
+  border-bottom: 8px solid #a8a8a8;
+}
+.input_manami input:focus,
+.input_manami input:valid {
+  padding-top: 22px;
+}
+.input_manami input:focus:focus + label,
+.input_manami input:valid:focus + label,
+.input_manami input:focus:valid + label,
+.input_manami input:valid:valid + label {
+  transform: translateY(46px);
+  font-size: 16px;
+}
+.input_manami input:focus:focus + label::before,
+.input_manami input:valid:focus + label::before,
+.input_manami input:focus:valid + label::before,
+.input_manami input:valid:valid + label::before {
+  transform: translateY(-92px);
+  border-bottom: 40px solid #a8a8a8;
+  z-index: 99;
 }
