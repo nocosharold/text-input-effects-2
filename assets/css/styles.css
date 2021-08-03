@@ -91,40 +91,40 @@ body {
   width: 100%;
 }
 .input_manami label::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
   background-color: #e8e8e8;
+  content: "";
+  height: 100%;
+  position: absolute;
   transform: translateY(-46px);
   transition: all 0.2s ease;
+  width: 100%;
 }
 .input_manami label::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
   background-color: #e8e8e8;
+  content: "";
+  height: 100%;
+  position: absolute;
   transform: translateY(-46px);
+  width: 100%;
 }
 .input_manami input {
   background: transparent;
-  box-sizing: border-box;
-  padding: 0.5em;
+  border-bottom: 8px solid #a8a8a8;
+  border-top: 1px solid rgba(168, 168, 168, 0.2);
   border: none;
+  box-sizing: border-box;
   color: #fff;
   font-size: 26px;
   height: 48px;
   left: 0;
   line-height: 46px;
+  margin: 0;
   outline: none;
+  padding: 0.5em;
   position: absolute;
+  transition: all 0.2s ease;
   width: 350px;
   z-index: 99;
-  transition: all 0.2s ease;
-  border-top: 1px solid rgba(168, 168, 168, 0.2);
-  border-bottom: 8px solid #a8a8a8;
-  margin: 0;
 }
 .input_manami input:focus,
 .input_manami input:valid {
@@ -134,14 +134,14 @@ body {
 .input_manami input:valid:focus + label,
 .input_manami input:focus:valid + label,
 .input_manami input:valid:valid + label {
-  transform: translateY(46px);
   font-size: 16px;
+  transform: translateY(46px);
 }
 .input_manami input:focus:focus + label::before,
 .input_manami input:valid:focus + label::before,
 .input_manami input:focus:valid + label::before,
 .input_manami input:valid:valid + label::before {
-  transform: translateY(-92px);
   border-bottom: 40px solid #a8a8a8;
+  transform: translateY(-92px);
   z-index: 99;
 }
